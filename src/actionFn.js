@@ -218,7 +218,7 @@ export default function actionFn(url, name, options, ACTIONS={}, meta={}) {
         });
       } else {
         // if helper alias is synchronous
-        fastApply(
+        return fastApply(
           sync ? fn.sync : fn, null, helpersResult.concat(callback)
         )(dispatch, getState);
       }
